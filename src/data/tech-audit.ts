@@ -69,13 +69,13 @@ export const lighthouseResults = [
 
 export const scorecard = [
   { dimension: "Brand design", score: "9/10", note: "Looks expensive for a reason." },
-  { dimension: "Photography", score: "9.5/10", note: "Excellent raw materials — also the performance bomb." },
+  { dimension: "Photography", score: "9.5/10", note: "Excellent raw materials — also the main LCP cost center." },
   { dimension: "Shopify operations", score: "8/10", note: "Commerce foundation is fine. Don't rebuild checkout." },
-  { dimension: "Homepage performance", score: "4/10", note: "Luxury lookbook layered on a storefront." },
+  { dimension: "Homepage performance", score: "4/10", note: "Rich editorial storefront carries real mobile cost." },
   { dimension: "Mobile experience", score: "3–5/10", note: "Heavy DOM + JS feels sticky on iPhone." },
-  { dimension: "Technical restraint", score: "3/10", note: "Over-designed and over-instrumented." },
-  { dimension: "SEO content potential", score: "7/10", note: "Good ingredients; theme architecture undercuts crawlable campaigns." },
-  { dimension: "Conversion risk from speed", score: "Significant", note: "A $289 steak shopper should not feel the site dragging." },
+  { dimension: "Technical restraint", score: "3/10", note: "Many modules and tags load before the shopper needs them." },
+  { dimension: "SEO content potential", score: "7/10", note: "Strong product story; campaign landing architecture is the gap." },
+  { dimension: "Conversion risk from speed", score: "Significant", note: "Premium AOV shoppers notice friction on cold mobile loads." },
 ];
 
 export const damageHierarchy = [
@@ -88,8 +88,8 @@ export const damageHierarchy = [
     body: "Maestrooo luxury theme behavior: mega-menu, cart drawer, search overlay, editorial modules, image transitions, product cards, shop-the-dish. Individually fine; together they block the main thread.",
   },
   {
-    title: "Shopify app + marketing-script pileup",
-    body: "GTM, Google Ads, likely GA4/Meta/Microsoft, Klaviyo, Bold, accessibility widget, SMS, Giftship issues, consent tooling. Each claims async; together they wake up after paint and fight the shopper.",
+    title: "Shopify app + marketing-script weight",
+    body: "GTM, Google Ads, likely GA4/Meta/Microsoft, Klaviyo, Bold, accessibility, SMS, Giftship, consent tooling. Each may be justified; together they compete with first paint on cold loads.",
   },
   {
     title: "Heavy duplicated navigation / hidden UI",
@@ -112,7 +112,7 @@ export const techStackVerdict = [
     bullets: [
       "Shopify storefront + checkout; Cloudflare-backed Shopify CDN",
       "Products, inventory, orders, customers",
-      "Shopify is not the villain.",
+      "Shopify remains the right commerce foundation.",
     ],
   },
   {
@@ -120,9 +120,9 @@ export const techStackVerdict = [
     stance: "Leave alone",
     bullets: [
       "Maestrooo custom luxury theme (not Dawn)",
-      "Heavy lookbook is the Lighthouse problem — not our rebuild target",
-      "Brand browsers / cached visitors can keep using it",
-      "Optional hygiene only — paste note to their web team",
+      "Editorial weight shows up in Lighthouse — not a rebuild target for growth",
+      "Brand and returning visitors can keep using the storefront",
+      "Optional hygiene only — paste note to the web team if useful",
     ],
   },
   {
@@ -131,8 +131,8 @@ export const techStackVerdict = [
     bullets: [
       "Bold Subscriptions (detected)",
       "Giftship / corporate gifting (Liquid error on live page)",
-      "Main nav Gifting → # (broken/incomplete)",
-      "Likely leftover app embeds after uninstalls",
+      "Main nav Gifting → # (needs attention)",
+      "Review app embeds for unused leftover scripts",
     ],
   },
   {
@@ -162,7 +162,7 @@ export const techStackVerdict = [
       "Preferred: new marketing/SEO domain (no “shop” in the name)",
       "Fallback: discover.wagyushop.com for paid experiments",
       "Hand off to Shopify PDPs + native checkout",
-      "Do not try to rank the bloated theme as the growth engine",
+      "Do not depend on ranking the full theme shell as the growth engine",
     ],
   },
 ];
@@ -170,10 +170,10 @@ export const techStackVerdict = [
 export const actionPlan = [
   { priority: "P0", action: "Identify the actual mobile LCP image — Measure real mobile LCP on homepage, then collection and PDP templates separately." },
   { priority: "P0", action: "Generate proper AVIF/WebP mobile + desktop variants — Mobile must not get desktop heroes." },
-  { priority: "P0", action: "Preload only the true LCP asset — Kill above-the-fold preload pileups." },
+  { priority: "P0", action: "Preload only the true LCP asset — Trim above-the-fold preload lists." },
   { priority: "P0", action: "Lazy-load everything below the first viewport — Including background images and editorial modules." },
-  { priority: "P1", action: "Remove sliders or load after idle — Luxury carousels are main-thread tax." },
-  { priority: "P0", action: "Audit every Shopify app embed — Especially Giftship breakage, Bold, accessibility, popups, recommendations, chat, reviews." },
+  { priority: "P1", action: "Remove sliders or load after idle — Luxury carousels compete with main-thread work." },
+  { priority: "P0", action: "Audit every Shopify app embed — Especially Giftship Liquid error, Bold, accessibility, popups, recommendations, chat, reviews." },
   { priority: "P1", action: "Fire marketing tags after consent or interaction where possible — Visual paint first. Tracking second." },
   { priority: "P1", action: "Remove duplicate GTM / native pixel implementations — LinkedIn appears twice; hunt overlaps across Google/Meta/native Shopify." },
   { priority: "P1", action: "Load quick-shop / modal code only after click." },

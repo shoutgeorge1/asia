@@ -11,17 +11,17 @@ export const overviewKpis = [
 export const featureCards = [
   {
     title: "Bypass Strategy",
-    body: "Go around the bloated theme: lean Next.js → Storefront API → Shopify checkout.",
+    body: "Lean Next.js acquisition path → Storefront API → Shopify checkout, without rebuilding the brand theme.",
     href: "/bypass",
   },
   {
     title: "Tech Audit",
-    body: "Critical Shopify performance diagnosis: imagery, theme JS, apps, duplicated markup, tracking pileup.",
+    body: "Performance diagnosis with real Lighthouse receipts: imagery, theme JS, apps, and tracking weight.",
     href: "/tech-audit",
   },
   {
     title: "TWS Reserve",
-    body: "Matched to their live Reserve page — subscriber inventory, exclusive packages, priority email access.",
+    body: "Aligned to the live Reserve page — subscriber inventory, exclusive packages, priority email access.",
     href: "/landing/vip",
   },
   {

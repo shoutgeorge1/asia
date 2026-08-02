@@ -60,9 +60,9 @@ export const proposedArchitecture = {
   flow: "Ad/organic → lean Next.js portal → Shopify PDP → native cart/checkout",
   corePrinciple: "Shopify owns commerce. Next.js owns specialized acquisition. Theme stays put.",
   themeStance:
-    "Do not rebuild or SEO-chase the Maestrooo Shopify theme. Leave it for cached / brand-tolerant visitors. Acquisition does not depend on ranking that shell.",
+    "Keep the Maestrooo Shopify theme for brand and returning visitors. Do not make a theme rewrite the growth plan. Acquisition should not depend on ranking the full storefront shell.",
   seoNote:
-    "Strongest justification is acquisition flexibility, experimentation speed, storytelling, and paid economics — not overstated organic promises. A clean new domain is better for long-term SEO than forcing guides onto a bloated theme. Subdomain is fine for phase-1 paid tests.",
+    "Strongest justification is acquisition flexibility, experimentation speed, storytelling, and paid economics — not overstated organic promises. A clean new domain is better for long-term SEO than forcing guides into the full theme. Subdomain is fine for phase-1 paid tests.",
   tracking: [
     "Coordinated GTM / GA4 across portal ↔ Shopify",
     "Cross-domain session continuity",

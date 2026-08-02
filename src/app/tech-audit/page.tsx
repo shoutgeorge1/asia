@@ -20,8 +20,8 @@ export default function TechAuditPage() {
   return (
     <AppShell
       title="Shopify performance tech audit"
-      subtitle="The store looks expensive. The frontend is indulgent. Shopify is not the villain — the theme + apps + tags buried a fast foundation. Growth move: leave the theme alone and acquire elsewhere."
-      eyebrow="Critical external tech audit · Real Lighthouse · homepage 12/100"
+      subtitle="The brand presentation is strong. Public Lighthouse shows the theme, apps, and tags add real weight on top of a fast Shopify foundation. Growth move: leave the theme for brand browsing, and acquire on a leaner path."
+      eyebrow="External tech audit · Real Lighthouse · homepage 12/100"
     >
       <p className="mb-6 text-sm text-muted">
         Measured locally with Lighthouse 12.8.2, mobile form factor, simulated
@@ -48,12 +48,12 @@ export default function TechAuditPage() {
         </p>
       </section>
 
-      <section id="horror-show" className="mt-10">
+      <section id="lighthouse-receipts" className="mt-10">
         <div className="flex flex-wrap items-end justify-between gap-2">
           <h3 className="font-display text-xl font-semibold text-ink">
             Mobile Lighthouse — compact receipts
           </h3>
-          <p className="text-xs text-muted">Scores as cards · not full-page shots</p>
+          <p className="text-xs text-muted">Score cards · measured 2026-07-31</p>
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
           {lighthouseResults.map((result) => (
@@ -121,11 +121,12 @@ export default function TechAuditPage() {
       <section className="mt-12 rounded-xl border border-line bg-panel p-6">
         <h3 className="font-display text-xl font-semibold text-ink">Bottom line</h3>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          The Wagyu Shop is slow because it is over-designed and over-instrumented.
-          That does not mean we should rebuild the theme. Leave the lookbook for
-          brand browsers. Put acquisition (paid + SEO) on a lean Next.js portal —
-          preferably a new domain without “shop” in the name — and hand shoppers
-          into native Shopify PDPs and checkout.
+          Performance headroom is constrained by a rich luxury theme, large media,
+          and a full marketing-script stack — not by Shopify as a commerce
+          platform. That does not require a theme rebuild. Keep the brand
+          storefront for direct and returning visitors. Put acquisition (paid +
+          SEO) on a lean Next.js portal — preferably a new domain without “shop”
+          in the name — and hand shoppers into native Shopify PDPs and checkout.
         </p>
       </section>
 

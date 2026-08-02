@@ -53,7 +53,7 @@ export default function OverviewPage() {
           Fundamentals are covered. This shows the next layer.
         </h3>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-          Not a teardown. The prototype demonstrates how paid media, Shopify,
+          Not a critique of the fundamentals. The prototype shows how paid media, Shopify,
           email/SMS, seasonal offers, VIP treatment, and fulfillment-aware
           campaign pacing can operate as one premium growth system.
         </p>

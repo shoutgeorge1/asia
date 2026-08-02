@@ -88,19 +88,18 @@ export default function DashboardPage() {
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         <div className="rounded-xl border border-red-200 bg-red-50 p-6">
           <h3 className="font-display text-lg font-semibold text-ink">
-            Critical · Tech audit · Horror show
+            Tech audit · Performance receipts
           </h3>
           <p className="mt-2 font-medium text-red-800">
             Homepage mobile Lighthouse: 12/100 · LCP 7.6s
           </p>
           <p className="mt-2 text-sm text-muted">
-            Compact Lighthouse cards + a copy/paste note for their web team.
-            Theme stays alone. Top damage: huge imagery · theme JS · app/tag
-            pileup. Server is fine (~220ms). The shell is not — and we are not
-            rebuilding it.
+            Compact Lighthouse cards + a copy/paste note for the web team.
+            Primary weight: large imagery · theme JS · apps/tags. Server response
+            is fine (~220ms). Growth plan does not require rebuilding the theme.
           </p>
           <Link
-            href="/tech-audit#horror-show"
+            href="/tech-audit#lighthouse-receipts"
             className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
           >
             Open tech audit →
@@ -109,11 +108,11 @@ export default function DashboardPage() {
 
         <div className="rounded-xl border border-line bg-panel p-6">
           <h3 className="font-display text-lg font-semibold text-ink">
-            Strategy · Go around it
+            Strategy · Selective acquisition path
           </h3>
           <p className="mt-2 text-sm text-muted">
-            Leave the Maestrooo lookbook alone. Acquire on a lean Next.js portal
-            — <strong>new domain preferred</strong>,{" "}
+            Keep the brand storefront for loyal and direct traffic. Acquire on a
+            lean Next.js portal — <strong>new domain preferred</strong>,{" "}
             {proposedArchitecture.subdomain} as fallback — then hand shoppers
             into Shopify PDPs and checkout.
           </p>

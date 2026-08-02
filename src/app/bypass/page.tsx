@@ -14,20 +14,20 @@ export default function BypassPage() {
   return (
     <AppShell
       title="Bypass strategy: Next.js → Shopify API"
-      subtitle="Yes — you're thinking about this properly. The live storefront is bloated. You are not obligated to fix every Maestrooo / app / pixel problem before you can sell steak faster."
-      eyebrow="Go around the bloat"
+      subtitle="Keep Shopify as the commerce engine. Route paid and SEO traffic through a lean Next.js acquisition layer, then hand shoppers into native checkout — without rebuilding the brand storefront."
+      eyebrow="Selective acquisition path"
     >
       <section className="rounded-xl border border-line bg-panel p-6">
         <h3 className="font-display text-xl font-semibold text-ink">
-          Straight answer
+          The idea in plain terms
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          Don&apos;t repair the Maestrooo lookbook — leave it for brand browsers.
-          Route paid/SEO through a lean Next.js portal (
+          The current theme is doing a lot of brand storytelling work — that can
+          stay. For paid and SEO sessions, route through a lean Next.js portal (
           <strong>new domain without “shop” preferred</strong>;{" "}
           {proposedArchitecture.subdomain} as fallback), pull product data from
           the Storefront API when useful, then hand shoppers into Shopify
-          cart/checkout. Going around the bloat — not rewriting their store.
+          cart/checkout. A selective path in — not a rewrite of the store.
         </p>
       </section>
 
@@ -80,7 +80,7 @@ export default function BypassPage() {
         <pre className="mt-8 overflow-x-auto rounded-xl border border-line bg-panel p-6 text-xs text-muted">
 {`Paid / SEO traffic
         ↓
-Lean Next.js landing  (SSR / static, tiny JS)
+Lean Next.js landing  (SSR / static, light JS)
         ↓
 Shopify Storefront API  (products, price, availability, media)
         ↓
@@ -91,12 +91,12 @@ Shopify cart / checkout  (still Shopify — do not fake this)`}
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         <section>
           <h3 className="font-display text-xl font-semibold text-ink">
-            What you go around
+            What the lean path avoids loading
           </h3>
           <ul className="mt-4 space-y-2">
             {goAround.map((item) => (
               <li key={item} className="flex gap-2 text-sm text-muted">
-                <span className="text-accent">×</span>
+                <span className="text-accent">·</span>
                 {item}
               </li>
             ))}
@@ -104,7 +104,7 @@ Shopify cart / checkout  (still Shopify — do not fake this)`}
         </section>
         <section>
           <h3 className="font-display text-xl font-semibold text-ink">
-            What you keep
+            What stays on Shopify
           </h3>
           <ul className="mt-4 space-y-2">
             {keepList.map((item) => (
@@ -119,7 +119,7 @@ Shopify cart / checkout  (still Shopify — do not fake this)`}
 
       <section className="mt-12">
         <h3 className="font-display text-xl font-semibold text-ink">
-          Directly to the Shopify API — precise version
+          Shopify API — precise version
         </h3>
         <div className="mt-4 space-y-4">
           {apiApproaches.map((approach) => (
@@ -136,12 +136,13 @@ Shopify cart / checkout  (still Shopify — do not fake this)`}
 
       <section className="mt-12">
         <h3 className="font-display text-xl font-semibold text-ink">
-          Are you right about the bloat?
+          Why this diagnosis holds up
         </h3>
         <p className="mt-2 text-sm text-muted">
-          Yes. From the outside: Maestrooo luxury theme, oversized media, heavy
-          nav duplication, app/script pileup, Giftship Liquid errors, tracking
-          that wakes up after paint.
+          Public Lighthouse and storefront signals point to a heavy luxury theme
+          shell — large media, rich navigation, apps, and marketing scripts —
+          on top of an otherwise solid Shopify foundation. The opportunity is a
+          lighter acquisition lane, not a critique of the brand look.
         </p>
         <div className="mt-6 space-y-3">
           {myths.map((item) => (
@@ -150,11 +151,11 @@ Shopify cart / checkout  (still Shopify — do not fake this)`}
               className="rounded-xl border border-line bg-panel p-4"
             >
               <p className="text-sm">
-                <span className="font-medium text-red-800">Myth:</span>{" "}
+                <span className="font-medium text-ink">Assumption:</span>{" "}
                 <span className="text-muted">{item.myth}</span>
               </p>
               <p className="mt-1 text-sm">
-                <span className="font-medium text-green-800">Reality:</span>{" "}
+                <span className="font-medium text-accent">Clarification:</span>{" "}
                 <span className="text-muted">{item.reality}</span>
               </p>
             </div>
