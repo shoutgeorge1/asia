@@ -39,7 +39,7 @@ export const featureCards = [
 export const positioningBullets = [
   "Stronger commercial packaging and gifting",
   "Selective Next.js experiences above Shopify",
-  "Lifecycle thinking beyond channel operation",
+  "Owned-channel programs that protect second-purchase economics",
   "A dashboard leadership can actually use",
 ];
 
@@ -52,7 +52,7 @@ export const exploreLinks = [
   },
   {
     label: "Customer lifecycle",
-    supporting: "From paid click to VIP invitation and repeat purchase",
+    supporting: "Owned-channel backlog: welcome, cut education, Reserve, gifting, win-back",
     href: "/lifecycle",
   },
   {
