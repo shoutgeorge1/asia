@@ -1,19 +1,15 @@
-import { livePrototypePaths } from "@/lib/live-prototype";
-
 export const landingGallery = [
   {
     matchedTo: "/pages/the-reserve",
     title: "TWS Reserve",
-    body: "Polished Vercel comp — black/white Reserve capture with subscriber-only inventory framing. Opens the live prototype URL.",
-    href: livePrototypePaths.vip,
-    external: true,
+    body: "Black/white Reserve capture with subscriber-only inventory framing, hero photography grid, and priority email access.",
+    href: "/landing/vip",
   },
   {
     matchedTo: "Corporate Gifting + seasonal layer",
     title: "Gifting",
-    body: "Polished Vercel comp — corporate + seasonal gifting packaging. Opens the live prototype URL.",
-    href: livePrototypePaths.gifting,
-    external: true,
+    body: "Corporate + seasonal gifting packaging with occasion/budget filters, bundle cards, and shipping cutoff calendar.",
+    href: "/landing/gifting",
   },
 ];
 
@@ -86,7 +82,7 @@ export const shippingCutoffs = [
 
 export const liveSiteNotes = [
   "Corporate Gifts page currently shows a Liquid error for giftship.liquid",
-  "Main nav Gifting currently points to #",
+  "Main nav “Gifting” currently points to #",
   "Concierge already exists via phone + SMS — keep that human path",
   "Next.js value: fixable SEO landing experiences without theme breakage risk",
 ];

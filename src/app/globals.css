@@ -80,6 +80,23 @@ a {
   min-height: 100vh;
 }
 
+.lp-banner {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lp-banner a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s;
+}
+
+.lp-banner a:hover {
+  color: #fff;
+}
+
 .lp-display {
   font-family: var(--font-lp), system-ui, sans-serif;
   font-weight: 300;

@@ -33,9 +33,9 @@ export function EmailCapture({
 
   if (dark) {
     return (
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <p className="text-sm text-white/80">{title}</p>
-        <div className="flex flex-col gap-2 sm:flex-row">
+      <form onSubmit={handleSubmit} className="mx-auto max-w-xl text-center">
+        <p className="text-sm text-white/70">{title}</p>
+        <div className="mt-4 flex flex-col gap-3 sm:flex-row">
           <input
             type="email"
             placeholder="Email"
