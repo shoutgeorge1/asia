@@ -1,40 +1,31 @@
 # Asia / The Wagyu Shop — Growth Vision
 
-**Concept Prototype** for Asia International / [The Wagyu Shop](https://wagyushop.com/).
+Concept prototype for Asia International / [The Wagyu Shop](https://wagyushop.com/).  
+Shopify remains the commerce engine. Sample data only. Not an official company site.
 
-Live reference: [asia-wagyu-growth.vercel.app](https://asia-wagyu-growth.vercel.app)
+## Live review
 
-## What this is
+**Production:** https://asia-wagyu-growth.vercel.app/
 
-An unofficial interview prototype demonstrating a luxury commerce experience layer and executive command center. **Shopify remains the commerce engine** for products, inventory, checkout, orders, customers, payments, and fulfillment.
+| Page | URL |
+|------|-----|
+| Overview | https://asia-wagyu-growth.vercel.app/ |
+| Executive Dashboard | https://asia-wagyu-growth.vercel.app/dashboard |
+| Tech Audit | https://asia-wagyu-growth.vercel.app/tech-audit |
+| Bypass Strategy | https://asia-wagyu-growth.vercel.app/bypass |
+| System Map | https://asia-wagyu-growth.vercel.app/system-map |
+| Lifecycle | https://asia-wagyu-growth.vercel.app/lifecycle |
+| Landing Gallery | https://asia-wagyu-growth.vercel.app/landing |
+| TWS Reserve | https://asia-wagyu-growth.vercel.app/landing/vip |
+| Gifting | https://asia-wagyu-growth.vercel.app/landing/gifting |
 
-This repo (`asia`) is the home for the Asia Growth Vision prototype — not a Shopify replacement and not an official company site.
+One-click launcher (local/dev): `/open-all`  
+Desktop helper: `./scripts/open-all-pages.sh`
 
-## Routes
+## Docs
 
-| Route | Purpose |
-| --- | --- |
-| `/` | Overview hub with KPI strip and feature cards |
-| `/dashboard` | Executive KPI dashboard, platforms to connect, channel performance |
-| `/tech-audit` | Shopify performance tech audit with Lighthouse receipts |
-| `/bypass` | Bypass strategy: lean Next.js → Storefront API → Shopify checkout |
-| `/system-map` | System architecture with proposed discover.wagyushop.com layer |
-| `/lifecycle` | Customer lifecycle from acquisition to repeat purchase |
-| `/landing` | Landing page gallery |
-| `/landing/vip` | TWS Reserve concept (black storefront chrome) |
-| `/landing/gifting` | Corporate + Holiday gifting concept with bundle filters |
-
-## Architecture
-
-See `docs/ARCHITECTURE.md` for the Aug 1 proposed architecture strategy (discover.wagyushop.com acquisition layer, phased rollout, cross-subdomain tracking).
-
-See `docs/BRIEF.md` for the full interview brief.
-
-## Design
-
-- **Command center:** cream `#f4f1ec`, ink `#1c1917`, accent `#8a6a35`, Source Sans 3 + Cormorant Garamond, left sidebar
-- **Landing pages:** black + Nunito, matched to The Wagyu Shop storefront chrome
-- Sample data only — clearly labeled throughout
+- `docs/BRIEF.md` — interview brief (Jul 31)
+- `docs/ARCHITECTURE.md` — discover.wagyushop.com hybrid architecture (Aug 1)
 
 ## Run locally
 
@@ -43,16 +34,8 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open http://localhost:3000
 
-## Build
+## Note on cloud agents
 
-```bash
-npm run build
-```
-
-## Positioning
-
-> You already have the fundamentals covered. This is not a criticism of the existing work. This shows how the brand could evolve into a more unified premium growth system.
-
-Unofficial concept prototype. Sample data only. Not affiliated with Asia International or The Wagyu Shop.
+Cursor **cloud** agents can open Chrome only inside the remote VM (or via screenshots / remote desktop). They cannot control Chrome on your laptop. On **desktop** Cursor, `./scripts/open-all-pages.sh` or `open <url>` opens your system browser.
