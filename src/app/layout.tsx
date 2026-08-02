@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Cormorant_Garamond, Nunito, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const display = Fraunces({
+const display = Cormorant_Garamond({
   variable: "--font-display",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const body = Source_Sans_3({
@@ -12,10 +13,16 @@ const body = Source_Sans_3({
   subsets: ["latin"],
 });
 
+const lp = Nunito({
+  variable: "--font-lp",
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "Asia · The Wagyu Shop — Growth Command Center",
+  title: "Asia Growth Vision — The Wagyu Shop Concept Prototype",
   description:
-    "Concept prototype: interview talking points and growth ideas for Asia International / The Wagyu Shop.",
+    "Unofficial interview prototype: luxury commerce experience layer and executive command center. Shopify remains the commerce engine. Sample data only.",
 };
 
 export default function RootLayout({
@@ -24,7 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} h-full`}>
+    <html
+      lang="en"
+      className={`${display.variable} ${body.variable} ${lp.variable} h-full`}
+    >
       <body className="min-h-full antialiased">{children}</body>
     </html>
   );

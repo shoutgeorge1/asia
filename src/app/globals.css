@@ -1,33 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #12110f;
-  --ink-soft: #2a2722;
-  --paper: #f3efe6;
-  --paper-dim: #e7e1d4;
-  --line: #d4cdb8;
-  --muted: #6f685c;
-  --accent: #8a6a2f;
-  --accent-soft: #c4a35a;
-  --panel: #fffdf8;
-  --good: #2f5d3a;
-  --warn: #8a5a22;
+  --bg: #f4f1ec;
+  --ink: #1c1917;
+  --accent: #8a6a35;
+  --accent-soft: #f3ead8;
+  --panel: #fff;
+  --muted: #78716c;
+  --line: #e7e5e4;
+
+  --ws-black: #000;
+  --ws-ink: #262626;
+  --ws-muted: #a1a1a1;
+  --ws-line: rgba(255, 255, 255, 0.18);
 }
 
 @theme inline {
+  --color-bg: var(--bg);
   --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-paper: var(--paper);
-  --color-paper-dim: var(--paper-dim);
-  --color-line: var(--line);
-  --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-panel: var(--panel);
-  --color-good: var(--good);
-  --color-warn: var(--warn);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
+  --font-lp: var(--font-lp);
 }
 
 * {
@@ -41,9 +39,7 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background:
-    radial-gradient(1200px 500px at 10% -10%, #fff9ec 0%, transparent 55%),
-    linear-gradient(180deg, var(--paper) 0%, #ebe4d6 100%);
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body), system-ui, sans-serif;
 }
@@ -54,13 +50,94 @@ a {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--accent-soft) 45%, white);
+  background: color-mix(in srgb, var(--accent-soft) 60%, white);
+}
+
+/* Command center utilities */
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.font-lp {
+  font-family: var(--font-lp), system-ui, sans-serif;
+}
+
+/* Landing page root */
+.lp-root {
+  --ws-black: #000;
+  --ws-ink: #262626;
+  --ws-muted: #a1a1a1;
+  --ws-line: rgba(255, 255, 255, 0.18);
+  background: var(--ws-black);
+  color: #fff;
+  font-family: var(--font-lp), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.lp-display {
+  font-family: var(--font-lp), system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.lp-nav {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lp-card {
+  border: 1px solid var(--ws-line);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.lp-input {
+  background: transparent;
+  border: 1px solid var(--ws-line);
+  color: #fff;
+  font-family: var(--font-lp), system-ui, sans-serif;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+.lp-input::placeholder {
+  color: var(--ws-muted);
+}
+
+.lp-input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+.lp-btn {
+  background: #fff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-family: var(--font-lp), system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 0.85rem 1.5rem;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.lp-btn:hover {
+  opacity: 0.85;
+}
+
+.lp-btn-outline {
+  background: transparent;
+  border: 1px solid var(--ws-line);
+  color: #fff;
 }
 
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -69,17 +146,17 @@ a {
 }
 
 .rise {
-  animation: rise 0.55s ease both;
+  animation: rise 0.5s ease both;
 }
 
 .rise-delay-1 {
-  animation-delay: 0.08s;
+  animation-delay: 0.06s;
 }
 
 .rise-delay-2 {
-  animation-delay: 0.16s;
+  animation-delay: 0.12s;
 }
 
 .rise-delay-3 {
-  animation-delay: 0.24s;
+  animation-delay: 0.18s;
 }

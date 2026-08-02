@@ -1,21 +1,40 @@
-# Asia International / The Wagyu Shop — Growth Command Center
+# Asia / The Wagyu Shop — Growth Vision
 
-**Concept Prototype** for interview follow-up with Tiffany (Asia International / [The Wagyu Shop](https://wagyushop.com/)).
+**Concept Prototype** for Asia International / [The Wagyu Shop](https://wagyushop.com/).
+
+Live reference: [asia-wagyu-growth.vercel.app](https://asia-wagyu-growth.vercel.app)
 
 ## What this is
 
-A small Next.js command center that digests growth ideas from George’s Jul 31 brief — not a Shopify replacement and not a farm of landing pages.
+An unofficial interview prototype demonstrating a luxury commerce experience layer and executive command center. **Shopify remains the commerce engine** for products, inventory, checkout, orders, customers, payments, and fulfillment.
 
-Shopify remains the commerce engine (products, inventory, checkout, orders, fulfillment). This repo is a place to remember and demo the *bolts-on*: VIP, gifting/bundles, lifecycle, and a light reporting story.
+This repo (`asia`) is the home for the Asia Growth Vision prototype — not a Shopify replacement and not an official company site.
 
-## Pages
+## Routes
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Overview · system sketch · customer journey |
-| `/ideas` | Digested growth ideas to highlight in conversation |
-| `/talking-points` | Interview do/don’t + quiet questions |
-| `docs/BRIEF.md` | Full source brief (email to self) |
+| `/` | Overview hub with KPI strip and feature cards |
+| `/dashboard` | Executive KPI dashboard, platforms to connect, channel performance |
+| `/tech-audit` | Shopify performance tech audit with Lighthouse receipts |
+| `/bypass` | Bypass strategy: lean Next.js → Storefront API → Shopify checkout |
+| `/system-map` | System architecture with proposed discover.wagyushop.com layer |
+| `/lifecycle` | Customer lifecycle from acquisition to repeat purchase |
+| `/landing` | Landing page gallery |
+| `/landing/vip` | TWS Reserve concept (black storefront chrome) |
+| `/landing/gifting` | Corporate + Holiday gifting concept with bundle filters |
+
+## Architecture
+
+See `docs/ARCHITECTURE.md` for the Aug 1 proposed architecture strategy (discover.wagyushop.com acquisition layer, phased rollout, cross-subdomain tracking).
+
+See `docs/BRIEF.md` for the full interview brief.
+
+## Design
+
+- **Command center:** cream `#f4f1ec`, ink `#1c1917`, accent `#8a6a35`, Source Sans 3 + Cormorant Garamond, left sidebar
+- **Landing pages:** black + Nunito, matched to The Wagyu Shop storefront chrome
+- Sample data only — clearly labeled throughout
 
 ## Run locally
 
@@ -26,8 +45,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Build
+
+```bash
+npm run build
+```
+
 ## Positioning
 
 > You already have the fundamentals covered. This is not a criticism of the existing work. This shows how the brand could evolve into a more unified premium growth system.
 
-Sample data / concept only. Not an official company site.
+Unofficial concept prototype. Sample data only. Not affiliated with Asia International or The Wagyu Shop.
