@@ -8,8 +8,14 @@ const PAGES = [
   { label: "System Map", path: "/system-map" },
   { label: "Lifecycle", path: "/lifecycle" },
   { label: "Landing Gallery", path: "/landing" },
-  { label: "TWS Reserve (VIP)", path: "/landing/vip" },
-  { label: "Gifting", path: "/landing/gifting" },
+  {
+    label: "TWS Reserve (VIP)",
+    path: "https://asia-wagyu-growth.vercel.app/landing/vip",
+  },
+  {
+    label: "Gifting",
+    path: "https://asia-wagyu-growth.vercel.app/landing/gifting",
+  },
 ] as const;
 
 export default function OpenAllPage() {

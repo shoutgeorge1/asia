@@ -5,8 +5,16 @@ import { vipImages } from "@/data/landing";
 
 const lpNav = [
   { href: "/", label: "Overview" },
-  { href: "/landing/vip", label: "TWS Reserve" },
-  { href: "/landing/gifting", label: "Gifting" },
+  {
+    href: "https://asia-wagyu-growth.vercel.app/landing/vip",
+    label: "TWS Reserve",
+    external: true,
+  },
+  {
+    href: "https://asia-wagyu-growth.vercel.app/landing/gifting",
+    label: "Gifting",
+    external: true,
+  },
   { href: "https://wagyushop.com/", label: "Live Shopify", external: true },
 ];
 

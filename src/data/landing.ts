@@ -1,15 +1,19 @@
+import { livePrototypePaths } from "@/lib/live-prototype";
+
 export const landingGallery = [
   {
     matchedTo: "/pages/the-reserve",
     title: "TWS Reserve",
-    body: "Black/white Maestrooo-style Reserve capture with subscriber-only inventory framing and live-site photography.",
-    href: "/landing/vip",
+    body: "Polished Vercel comp — black/white Reserve capture with subscriber-only inventory framing. Opens the live prototype URL.",
+    href: livePrototypePaths.vip,
+    external: true,
   },
   {
     matchedTo: "Corporate Gifting + seasonal layer",
     title: "Gifting",
-    body: "Corporate self-serve / concierge structure plus occasion filters, shipping cutoffs, and Giftship fix notes.",
-    href: "/landing/gifting",
+    body: "Polished Vercel comp — corporate + seasonal gifting packaging. Opens the live prototype URL.",
+    href: livePrototypePaths.gifting,
+    external: true,
   },
 ];
 

@@ -21,13 +21,13 @@ export const featureCards = [
   },
   {
     title: "TWS Reserve",
-    body: "Aligned to the live Reserve page — subscriber inventory, exclusive packages, priority email access.",
-    href: "/landing/vip",
+    body: "Polished Reserve comp on the Vercel prototype — subscriber inventory, exclusive packages, priority email access.",
+    href: "https://asia-wagyu-growth.vercel.app/landing/vip",
   },
   {
     title: "Corporate + Holiday Gifting",
-    body: "Self-serve / concierge gifting aligned to the live corporate page, plus seasonal bundle packaging.",
-    href: "/landing/gifting",
+    body: "Polished gifting comp on the Vercel prototype — corporate + seasonal packaging.",
+    href: "https://asia-wagyu-growth.vercel.app/landing/gifting",
   },
   {
     title: "Executive Dashboard",
