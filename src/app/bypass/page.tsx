@@ -22,12 +22,12 @@ export default function BypassPage() {
           Straight answer
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          Don&apos;t repair the Maestrooo lookbook. Leave Shopify as the commerce
-          processor and route paid/SEO traffic through lean Next.js pages on{" "}
-          <strong>{proposedArchitecture.subdomain}</strong> that pull product
-          data from the Storefront API, then hand shoppers into Shopify
-          cart/checkout. You are going around the bloat — not rewriting their
-          entire store.
+          Don&apos;t repair the Maestrooo lookbook — leave it for brand browsers.
+          Route paid/SEO through a lean Next.js portal (
+          <strong>new domain without “shop” preferred</strong>;{" "}
+          {proposedArchitecture.subdomain} as fallback), pull product data from
+          the Storefront API when useful, then hand shoppers into Shopify
+          cart/checkout. Going around the bloat — not rewriting their store.
         </p>
       </section>
 

@@ -1,94 +1,89 @@
-# Architecture Strategy — Aug 1, 2026
+# Architecture Strategy — Wagyu Shop acquisition layer
 
-**From:** George Aguilar  
-**Context:** Proposed technical architecture for Asia International / The Wagyu Shop growth vision  
-**Status:** Proposed future-state experiment — not an existing implementation
+**From:** George Aguilar (ChatGPT-assisted strategy + interview follow-up)  
+**Status:** Proposed future-state experiment — not an existing Wagyu Shop implementation  
+**Repo:** `asia` (Asia International / The Wagyu Shop Growth Vision)
 
 ---
 
 ## Core principle
 
-**Shopify owns commerce. Next.js owns specialized acquisition.**
+**Shopify owns commerce. Next.js owns specialized acquisition. The Shopify theme stays put.**
 
-Keep core ecommerce on native Shopify at [wagyushop.com](https://wagyushop.com/). Build a separate Next.js acquisition/editorial layer on a preferred subdomain.
+Do not rebuild catalog, cart, accounts, discounts, inventory, subscriptions, apps, or checkout in Next.js unless there is a proven business need.
 
-## Preferred subdomain
+## Theme decision (explicit)
 
-**discover.wagyushop.com**
+- Leave the Maestrooo Shopify theme alone for brand browsers and returning customers who already tolerate speed / have cache.
+- Do **not** treat theme SEO as the growth engine. We are not going to try to rank that shell.
+- Optional performance hygiene can be pasted to **their** web-dev team — George is not touching the theme.
 
-Also acceptable alternatives:
-- go.wagyushop.com
-- offers.wagyushop.com
+## Preferred acquisition surface
 
-## Acquisition flow
+### 1) New marketing / SEO domain (preferred)
+
+A domain **without “shop” in the name** — friend-of-the-brand editorial + acquisition portal that can grow into a durable site.
+
+Why:
+- Clean SEO footprint
+- No theme risk
+- Room for guides, grading education, gifting, VIP stories
+- Purchase intent routes into `wagyushop.com`
+
+### 2) Subdomain fallback (still valid)
+
+**discover.wagyushop.com** (also: go / offers)
+
+Useful for phase-1 paid experiments if a new domain is not ready. Isolates technical risk from the successful storefront.
+
+## Purpose of the Next.js layer
+
+Paid-search LPs · buying guides · grading education · comparisons · gift guides · seasonal campaigns · recipes · selectors/quizzes · merchandising flows · email/SMS capture · campaign bundles · fast CRO experiments.
+
+## Customer flow
 
 ```
-Ad / organic traffic
-        ↓
-discover.wagyushop.com (Next.js campaign / editorial layer)
-        ↓
-Shopify product detail page (PDP)
-        ↓
-Native Shopify cart / checkout
+Google Ad or organic discovery
+→ lean Next.js portal (new domain · or discover.wagyushop.com)
+→ recommended Wagyu product / story
+→ wagyushop.com/products/... native Shopify PDP
+→ native Shopify cart and checkout
 ```
+
+Not a second storefront. Educate, persuade, qualify, personalize, route.
 
 ## Division of responsibilities
 
-| Layer | Owns |
-| --- | --- |
-| **Shopify** | Products, inventory, checkout, payments, customers, orders, fulfillment |
-| **Next.js (discover subdomain)** | Campaign landings, VIP/Reserve experiences, seasonal gifting, editorial product stories, offer packaging, paid/SEO acquisition URLs |
-| **Klaviyo / SMS** | Lifecycle messaging, VIP invitations, gift reminders, win-back |
-| **Google Ads / Meta / GA4** | Paid acquisition, attribution, cross-channel measurement |
-| **Executive dashboard** | Unified KPI view across channels (internal tooling) |
+**Shopify owns:** catalog, PDPs (default), inventory, pricing, discounts, cart, checkout, accounts, subscriptions, reviews/apps, orders, Merchant Center feed.
 
-## SEO positioning
+**Next.js owns:** acquisition funnels, campaign LPs, editorial, interactive guides, custom conversion UX, experimentation, personalization, fast campaign deploy, advanced tracking/segmentation where useful.
 
-- Long-term organic guides may prefer `wagyushop.com/guides/...` on the main domain
-- The subdomain is still the right choice for **paid traffic and experiments first**
-- **Avoid overstating SEO benefit** — the primary win is speed, campaign agility, and paid economics, not guaranteed organic ranking gains
+## SEO consideration
 
-## Cross-subdomain tracking requirements
+- Long-term organic authority can live on the **new marketing domain** (or carefully on `wagyushop.com/guides/...` only if it does not disturb the theme).
+- Do not migrate existing ranking pages merely to justify Next.js.
+- Avoid overstating SEO benefit. Strongest case: acquisition flexibility, experimentation speed, storytelling, conversion optimization, while Shopify keeps ops strengths.
 
-When the Next.js layer goes live, wire:
+## Tracking requirements
 
-- Cross-subdomain GTM / GA4
-- Google Ads attribution
-- Meta pixel continuity
-- Klaviyo identity continuity
-- UTM preservation through checkout handoff
-- Consent management (shared or coordinated)
-- Enhanced conversions
+- Coordinated GTM / GA4 across portal ↔ Shopify
+- Cross-domain (or cross-subdomain) session continuity
+- Google Ads conversion attribution
+- Meta + Klaviyo identity continuity
+- UTM preservation
+- Consent management
+- Server-side / enhanced conversions
+- Funnel reporting: landing → PDP → purchase
 
 ## Phased rollout
 
-### Phase 1
-One focused Next.js campaign or buying-guide prototype on **discover.wagyushop.com**. Prove the landing experience, LCP, and Shopify handoff path.
+1. One focused Next.js campaign or buying-guide prototype (new domain if possible; else discover.*)
+2. Connect analytics, Shopify product data, conversion tracking
+3. Test vs equivalent native Shopify theme traffic
+4. Expand only if CVR, engagement, speed, or paid economics improve materially
 
-### Phase 2
-Connect analytics, Shopify product data (Storefront API), and conversion tracking. Validate cross-subdomain attribution.
+## Implementation in this prototype
 
-### Phase 3
-Test against equivalent native Shopify theme traffic. Compare CVR, engagement, speed, and paid CPA side by side.
-
-### Phase 4
-Expand to additional campaigns **only if** CVR, engagement, speed, and paid economics improve over the native path.
-
-## What this is not
-
-- Not a full headless Shopify replacement
-- Not a teardown of the existing Maestrooo theme for brand browsers
-- Not a claim that Shopify is inadequate for commerce operations
-- Not an existing implementation — this is a proposed experiment
-
-## Relationship to bypass strategy
-
-The bypass strategy (see `/bypass` in the prototype) routes paid/SEO traffic around theme bloat via lean Next.js pages that read from the Storefront API and hand off to native checkout. The discover subdomain is the home for those experiences.
-
-## Relationship to tech audit
-
-The tech audit (see `/tech-audit`) documents why the current storefront shell is slow. The Next.js layer is a selective fix for acquisition paths — not a substitute for auditing apps, tags, and theme performance on the main store.
-
----
-
-See also: `docs/BRIEF.md` for the full interview brief and growth vision context.
+- Dashboard / tech audit / system map / bypass updated to reflect **leave theme alone** + **new domain preferred**
+- Tech audit includes a **copy/paste box** for their web-dev team
+- Lighthouse receipts shown as **compact cards**, not oversized screenshots

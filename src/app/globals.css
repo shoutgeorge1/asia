@@ -3,11 +3,14 @@
 :root {
   --bg: #f4f1ec;
   --ink: #1c1917;
+  --ink-soft: #44403c;
   --accent: #8a6a35;
   --accent-soft: #f3ead8;
   --panel: #fff;
+  --paper: #faf8f4;
   --muted: #78716c;
   --line: #e7e5e4;
+  --good: #2f5d3a;
 
   --ws-black: #000;
   --ws-ink: #262626;
@@ -18,11 +21,14 @@
 @theme inline {
   --color-bg: var(--bg);
   --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-panel: var(--panel);
+  --color-paper: var(--paper);
   --color-muted: var(--muted);
   --color-line: var(--line);
+  --color-good: var(--good);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
   --font-lp: var(--font-lp);

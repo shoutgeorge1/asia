@@ -117,12 +117,12 @@ export const techStackVerdict = [
   },
   {
     area: "Theme / frontend",
-    stance: "Fix",
+    stance: "Leave alone",
     bullets: [
       "Maestrooo custom luxury theme (not Dawn)",
-      "Mega-menu, drawers, overlays, sliders",
-      "Editorial homepage lookbook modules",
-      "Duplicated desktop/mobile markup",
+      "Heavy lookbook is the Lighthouse problem — not our rebuild target",
+      "Brand browsers / cached visitors can keep using it",
+      "Optional hygiene only — paste note to their web team",
     ],
   },
   {
@@ -157,12 +157,12 @@ export const techStackVerdict = [
   },
   {
     area: "Experience layer (proposed)",
-    stance: "Add carefully",
+    stance: "Build elsewhere",
     bullets: [
-      "Lean Next.js campaign / SEO landings",
-      "Product data from Shopify",
-      "Shopify product / cart / checkout unchanged",
-      "No giant client React SPA pretending to be a landing page",
+      "Preferred: new marketing/SEO domain (no “shop” in the name)",
+      "Fallback: discover.wagyushop.com for paid experiments",
+      "Hand off to Shopify PDPs + native checkout",
+      "Do not try to rank the bloated theme as the growth engine",
     ],
   },
 ];

@@ -72,8 +72,9 @@ export default function OverviewPage() {
           Proposed architecture · future-state experiment
         </p>
         <p className="mt-2 text-sm leading-relaxed text-ink">
-          {proposedArchitecture.disclaimer} Acquisition experiences on{" "}
-          <strong>{proposedArchitecture.subdomain}</strong> — flow:{" "}
+          {proposedArchitecture.disclaimer} Prefer a{" "}
+          <strong>new marketing/SEO domain</strong> (no “shop” in the name);
+          subdomain fallback {proposedArchitecture.subdomain}. Flow:{" "}
           {proposedArchitecture.flow}. {proposedArchitecture.corePrinciple}
         </p>
         <Link

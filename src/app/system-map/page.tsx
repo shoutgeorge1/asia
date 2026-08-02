@@ -19,10 +19,12 @@ export default function SystemMapPage() {
         <p className="mt-2 text-sm text-ink">{proposedArchitecture.disclaimer}</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
-            <p className="text-xs font-medium text-muted">Preferred subdomain</p>
-            <p className="font-medium text-ink">{proposedArchitecture.subdomain}</p>
+            <p className="text-xs font-medium text-muted">Preferred host</p>
+            <p className="font-medium text-ink">
+              {proposedArchitecture.preferredHost}
+            </p>
             <p className="mt-1 text-xs text-muted">
-              Also acceptable: {proposedArchitecture.altSubdomains.join(", ")}
+              {proposedArchitecture.preferredHostNote}
             </p>
           </div>
           <div>
@@ -30,8 +32,17 @@ export default function SystemMapPage() {
             <p className="text-sm text-ink">{proposedArchitecture.flow}</p>
           </div>
         </div>
-        <p className="mt-4 text-sm font-medium text-ink">
+        <p className="mt-4 text-sm text-muted">
+          <span className="font-medium text-ink">Subdomain fallback: </span>
+          {proposedArchitecture.subdomain} (
+          {proposedArchitecture.altSubdomains.join(", ")}) —{" "}
+          {proposedArchitecture.subdomainRole}
+        </p>
+        <p className="mt-3 text-sm font-medium text-ink">
           {proposedArchitecture.corePrinciple}
+        </p>
+        <p className="mt-2 text-sm text-muted">
+          {proposedArchitecture.themeStance}
         </p>
         <p className="mt-2 text-sm text-muted">{proposedArchitecture.seoNote}</p>
       </section>
@@ -85,7 +96,7 @@ export default function SystemMapPage() {
 
       <section className="mt-12">
         <h3 className="font-display text-xl font-semibold text-ink">
-          Cross-subdomain tracking
+          Cross-domain tracking
         </h3>
         <div className="mt-4 flex flex-wrap gap-2">
           {proposedArchitecture.tracking.map((item) => (

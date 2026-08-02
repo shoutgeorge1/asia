@@ -94,16 +94,16 @@ export default function DashboardPage() {
             Homepage mobile Lighthouse: 12/100 · LCP 7.6s
           </p>
           <p className="mt-2 text-sm text-muted">
-            Real receipts now live in the command center — screenshots, score
-            table, script counts. Top damage: Huge premium imagery · Custom theme
-            JavaScript and animation · Shopify app + marketing-script pileup.
-            Server is fine (~220ms). The shell is not.
+            Compact Lighthouse cards + a copy/paste note for their web team.
+            Theme stays alone. Top damage: huge imagery · theme JS · app/tag
+            pileup. Server is fine (~220ms). The shell is not — and we are not
+            rebuilding it.
           </p>
           <Link
             href="/tech-audit#horror-show"
             className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
           >
-            Open horror show →
+            Open tech audit →
           </Link>
         </div>
 
@@ -112,12 +112,10 @@ export default function DashboardPage() {
             Strategy · Go around it
           </h3>
           <p className="mt-2 text-sm text-muted">
-            Don&apos;t repair the Maestrooo lookbook. Leave Shopify as the
-            commerce processor and route paid/SEO traffic through lean Next.js
-            pages on{" "}
-            <strong>{proposedArchitecture.subdomain}</strong> that pull product
-            data from the Storefront API, then hand shoppers into Shopify
-            cart/checkout.
+            Leave the Maestrooo lookbook alone. Acquire on a lean Next.js portal
+            — <strong>new domain preferred</strong>,{" "}
+            {proposedArchitecture.subdomain} as fallback — then hand shoppers
+            into Shopify PDPs and checkout.
           </p>
           <Link
             href="/bypass"

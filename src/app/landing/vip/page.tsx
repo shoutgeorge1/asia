@@ -74,10 +74,10 @@ export default function VipLandingPage() {
         <h3 className="lp-display text-2xl">Why Next.js still helps</h3>
         <p className="mt-4 text-sm leading-relaxed text-white/70">
           Their current Reserve page is already a clean email-capture concept on
-          Shopify. A Next.js layer on discover.wagyushop.com is still useful
-          for SEO-stable campaign URLs, faster iteration on seasonal creative,
-          and A/B packaging without theme Liquid risk — while checkout stays on
-          Shopify.
+          Shopify. A Next.js layer on a new marketing domain (or
+          discover.wagyushop.com) is still useful for SEO-stable campaign URLs,
+          faster iteration on seasonal creative, and A/B packaging without theme
+          Liquid risk — while checkout stays on Shopify.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
