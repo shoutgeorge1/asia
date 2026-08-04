@@ -6,7 +6,7 @@ export default function LandingGalleryPage() {
   return (
     <AppShell
       title="Landing page concepts"
-      subtitle="VIP Reserve and Holiday Gifting landing concepts — black TWS-style comps served locally."
+      subtitle="Two campaign comps matched to live Wagyu Shop pages: Reserve (email / subscriber access) and Gifting."
     >
       <div className="grid gap-6 md:grid-cols-2">
         {landingGallery.map((card) => (

@@ -2,7 +2,7 @@ export const landingGallery = [
   {
     matchedTo: "/pages/the-reserve",
     title: "TWS Reserve",
-    body: "Black/white Reserve capture with subscriber-only inventory framing, hero photography grid, and priority email access.",
+    body: "Concept for their live Reserve email list: subscribe for subscriber-only inventory, exclusive packages, and priority access alerts — matched to wagyushop.com/pages/the-reserve.",
     href: "/landing/vip",
   },
   {

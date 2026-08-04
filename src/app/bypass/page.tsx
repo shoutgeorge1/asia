@@ -14,7 +14,7 @@ export default function BypassPage() {
   return (
     <AppShell
       title="Bypass strategy: Next.js → Shopify API"
-      subtitle="Keep Shopify as the commerce engine. Route paid and SEO traffic through a lean Next.js acquisition layer, then hand shoppers into native checkout — without rebuilding the brand storefront."
+      subtitle="A respectful growth path for stakeholders: keep Shopify as the commerce engine, keep the brand storefront for loyal and direct traffic, and give paid/SEO sessions a lighter front door that still checks out on Shopify."
       eyebrow="Selective acquisition path"
     >
       <section className="rounded-xl border border-line bg-panel p-6">
@@ -22,12 +22,13 @@ export default function BypassPage() {
           The idea in plain terms
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          The current theme is doing a lot of brand storytelling work — that can
-          stay. For paid and SEO sessions, route through a lean Next.js portal (
+          The live storefront is doing real brand storytelling — that can stay.
+          For paid and SEO sessions, route through a lean Next.js portal (
           <strong>new domain without “shop” preferred</strong>;{" "}
           {proposedArchitecture.subdomain} as fallback), pull product data from
           the Storefront API when useful, then hand shoppers into Shopify
-          cart/checkout. A selective path in — not a rewrite of the store.
+          cart/checkout. A selective path in — not a critique of the brand, and
+          not a rewrite of the store.
         </p>
       </section>
 
@@ -136,13 +137,14 @@ Shopify cart / checkout  (still Shopify — do not fake this)`}
 
       <section className="mt-12">
         <h3 className="font-display text-xl font-semibold text-ink">
-          Why this diagnosis holds up
+          Why this approach holds up
         </h3>
         <p className="mt-2 text-sm text-muted">
-          Public Lighthouse and storefront signals point to a heavy luxury theme
-          shell — large media, rich navigation, apps, and marketing scripts —
-          on top of an otherwise solid Shopify foundation. The opportunity is a
-          lighter acquisition lane, not a critique of the brand look.
+          Public Lighthouse and storefront signals show a rich luxury theme —
+          large media, full navigation, apps, and marketing scripts — on top of
+          an otherwise solid Shopify foundation. That is a common mature-store
+          pattern. The opportunity is a lighter acquisition lane alongside the
+          brand site, not a teardown of what already works for loyal shoppers.
         </p>
         <div className="mt-6 space-y-3">
           {myths.map((item) => (
@@ -185,7 +187,7 @@ Shopify cart / checkout  (still Shopify — do not fake this)`}
 
       <section className="mt-12">
         <h3 className="font-display text-xl font-semibold text-ink">
-          First builds if we execute the bypass
+          First builds if we run this path
         </h3>
         <p className="mt-2 text-sm text-muted">
           Prototype landings today are visual comps. Next step is a real

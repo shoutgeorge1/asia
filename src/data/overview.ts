@@ -21,7 +21,7 @@ export const featureCards = [
   },
   {
     title: "TWS Reserve",
-    body: "Reserve comp — subscriber inventory, exclusive packages, priority email access.",
+    body: "Email-list / subscriber access concept matched to their live Reserve page — exclusive inventory and priority alerts.",
     href: "/landing/vip",
   },
   {

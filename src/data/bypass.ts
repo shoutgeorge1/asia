@@ -22,12 +22,12 @@ export const bypassSteps = [
 ];
 
 export const goAround = [
-  "Full homepage hero + editorial module weight on every paid click",
-  "Duplicated desktop/mobile navigation DOM on cold loads",
-  "Theme JS for drawers, overlays, and interactive modules",
-  "Marketing apps and tags competing with first paint",
-  "Giftship Liquid issue on the corporate gifting template",
-  "Font, animation, and quick-shop assets on first mobile view",
+  "Full homepage hero + editorial modules on every paid click (keep them for brand browsers)",
+  "Full desktop/mobile navigation chrome on cold campaign loads",
+  "Theme JS for drawers, overlays, and interactive modules not needed on the landing",
+  "Marketing apps and tags that can load after the campaign story paints",
+  "Giftship Liquid issue on the corporate gifting template (fix separately)",
+  "Font, animation, and quick-shop assets before the first campaign view",
 ];
 
 export const keepList = [

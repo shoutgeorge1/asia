@@ -10,7 +10,9 @@ export default function VipLandingPage() {
   return (
     <LandingChrome activeNav="vip">
       <section className="px-5 pb-16 pt-14 text-center">
-        <p className="lp-nav text-white/55">Matched to live /pages/the-reserve</p>
+        <p className="lp-nav text-white/55">
+          Email list · subscriber access · matched to live /pages/the-reserve
+        </p>
         <h1 className="lp-display mt-4 text-4xl text-white sm:text-5xl md:text-6xl">
           TWS Reserve
         </h1>
@@ -85,10 +87,10 @@ export default function VipLandingPage() {
         className="mx-auto max-w-3xl px-5 pb-16 text-center text-sm leading-relaxed text-white/60"
       >
         <p>
-          Their current Reserve page is already a clean email-capture concept on
-          Shopify. A Next.js layer is still useful for SEO-stable campaign URLs,
-          faster iteration on seasonal creative, and A/B packaging without theme
-          Liquid risk — while checkout stays on Shopify.
+          On the live site, Reserve is already an email-capture / subscriber
+          access page for exclusive inventory. A Next.js layer is still useful
+          for SEO-stable campaign URLs, faster seasonal creative, and A/B
+          packaging without theme risk — while checkout stays on Shopify.
         </p>
       </section>
     </LandingChrome>

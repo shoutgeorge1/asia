@@ -35,7 +35,7 @@ George
 
 export const growthDomainStrategy = {
   themeStance:
-    "Leave the Shopify theme alone. Do not rebuild it or treat theme SEO as the growth engine.",
+    "Keep the Shopify brand storefront for loyal and direct traffic. Optional theme hygiene is welcome; a full theme rewrite is not required for growth.",
   preferredSurface:
     "New marketing / SEO domain (no “shop” in the name) — friend-of-the-brand editorial portal that can grow into a durable acquisition site.",
   whyNewDomain:
@@ -43,5 +43,5 @@ export const growthDomainStrategy = {
   subdomainFallback:
     "discover.wagyushop.com (or go / offers) remains acceptable for paid experiments if a new domain is not ready — still isolate risk from the theme.",
   rankingNote:
-    "Do not make ranking the full theme shell the growth plan. Brand and returning visitors can keep using wagyushop.com; paid/SEO acquisition should use a leaner path.",
+    "Ranking the full theme shell does not need to be the growth engine. Brand and returning visitors can keep using wagyushop.com; paid/SEO acquisition works better on a leaner path.",
 };

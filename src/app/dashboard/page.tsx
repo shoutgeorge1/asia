@@ -86,17 +86,18 @@ export default function DashboardPage() {
       </section>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
-        <div className="rounded-xl border border-red-200 bg-red-50 p-6">
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-6">
           <h3 className="font-display text-lg font-semibold text-ink">
             Tech audit · Performance receipts
           </h3>
-          <p className="mt-2 font-medium text-red-800">
+          <p className="mt-2 font-medium text-amber-900">
             Homepage mobile Lighthouse: 12/100 · LCP 7.6s
           </p>
           <p className="mt-2 text-sm text-muted">
-            Compact Lighthouse cards + a copy/paste note for the web team.
-            Primary weight: large imagery · theme JS · apps/tags. Server response
-            is fine (~220ms). Growth plan does not require rebuilding the theme.
+            Real Lighthouse cards plus a copy/paste note for the web team.
+            Primary weight: large imagery · theme JS · apps/tags. Shopify hosting
+            is fine (~220ms). Brand storefront can stay; growth can acquire on a
+            leaner path.
           </p>
           <Link
             href="/tech-audit#lighthouse-receipts"

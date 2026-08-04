@@ -68,40 +68,40 @@ export const lighthouseResults = [
 ];
 
 export const scorecard = [
-  { dimension: "Brand design", score: "9/10", note: "Looks expensive for a reason." },
-  { dimension: "Photography", score: "9.5/10", note: "Excellent raw materials — also the main LCP cost center." },
-  { dimension: "Shopify operations", score: "8/10", note: "Commerce foundation is fine. Don't rebuild checkout." },
-  { dimension: "Homepage performance", score: "4/10", note: "Rich editorial storefront carries real mobile cost." },
-  { dimension: "Mobile experience", score: "3–5/10", note: "Heavy DOM + JS feels sticky on iPhone." },
-  { dimension: "Technical restraint", score: "3/10", note: "Many modules and tags load before the shopper needs them." },
-  { dimension: "SEO content potential", score: "7/10", note: "Strong product story; campaign landing architecture is the gap." },
-  { dimension: "Conversion risk from speed", score: "Significant", note: "Premium AOV shoppers notice friction on cold mobile loads." },
+  { dimension: "Brand design", score: "9/10", note: "The store looks expensive — and it should." },
+  { dimension: "Photography", score: "9.5/10", note: "Excellent assets; the main opportunity is serving the right size per device." },
+  { dimension: "Shopify operations", score: "8/10", note: "Solid commerce foundation. Keep checkout on Shopify." },
+  { dimension: "Homepage performance", score: "4/10", note: "A rich editorial storefront carries measurable mobile cost." },
+  { dimension: "Mobile experience", score: "3–5/10", note: "DOM + JS weight shows up most clearly on cold iPhone loads." },
+  { dimension: "Technical restraint", score: "5/10", note: "Many modules and tags load before a first-time shopper needs them — common on mature luxury themes." },
+  { dimension: "SEO content potential", score: "7/10", note: "Strong product story; campaign landing architecture is the growth gap." },
+  { dimension: "Conversion risk from speed", score: "Watch", note: "Premium AOV shoppers are sensitive to friction on cold mobile loads." },
 ];
 
 export const damageHierarchy = [
   {
-    title: "Huge premium imagery",
-    body: "Edge-to-edge lifestyle heroes and oversized assets drive LCP. CDN hosting does not save bad source dimensions, mobile receiving desktop images, or broken srcset/lazy-load.",
+    title: "Premium imagery (largest LCP driver)",
+    body: "Edge-to-edge lifestyle heroes are brand-correct. The opportunity is source dimensions, mobile variants, and disciplined srcset/lazy-load — CDN alone doesn’t fix oversized assets.",
   },
   {
     title: "Custom theme JavaScript and animation",
-    body: "Maestrooo luxury theme behavior: mega-menu, cart drawer, search overlay, editorial modules, image transitions, product cards, shop-the-dish. Individually fine; together they block the main thread.",
+    body: "Maestrooo luxury theme behavior: mega-menu, cart drawer, search overlay, editorial modules, image transitions, product cards, shop-the-dish. Individually reasonable; together they add main-thread work on first load.",
   },
   {
-    title: "Shopify app + marketing-script weight",
-    body: "GTM, Google Ads, likely GA4/Meta/Microsoft, Klaviyo, Bold, accessibility, SMS, Giftship, consent tooling. Each may be justified; together they compete with first paint on cold loads.",
+    title: "Shopify apps + marketing scripts",
+    body: "GTM, Google Ads, likely GA4/Meta/Microsoft, Klaviyo, Bold, accessibility, SMS, Giftship, consent tooling. Each may be justified; sequencing and de-duplication protect first paint.",
   },
   {
-    title: "Heavy duplicated navigation / hidden UI",
-    body: "Desktop nav, mobile nav, drawer markup, footer copies, cart, and search all delivered up front.",
+    title: "Duplicated navigation / hidden UI",
+    body: "Desktop nav, mobile nav, drawer markup, footer copies, cart, and search are often delivered up front — a common Shopify theme pattern worth trimming over time.",
   },
   {
     title: "Fonts and interactive product modules",
-    body: "Font downloads + quick-shop / hover / modal variants load experiences before interaction.",
+    body: "Font downloads + quick-shop / hover / modal variants can wait until interaction instead of competing with first paint.",
   },
   {
     title: "Duplicate or poorly sequenced tracking",
-    body: "LinkedIn tracking appears twice in parsed homepage output. Mature Shopify accounts often ship overlapping pixels and duplicate GTM/native implementations.",
+    body: "LinkedIn tracking appears twice in parsed homepage output. Mature Shopify accounts often ship overlapping pixels and duplicate GTM/native implementations — easy hygiene win.",
   },
 ];
 
@@ -169,17 +169,17 @@ export const techStackVerdict = [
 
 export const actionPlan = [
   { priority: "P0", action: "Identify the actual mobile LCP image — Measure real mobile LCP on homepage, then collection and PDP templates separately." },
-  { priority: "P0", action: "Generate proper AVIF/WebP mobile + desktop variants — Mobile must not get desktop heroes." },
+  { priority: "P0", action: "Generate proper AVIF/WebP mobile + desktop variants — Phones should not receive desktop heroes." },
   { priority: "P0", action: "Preload only the true LCP asset — Trim above-the-fold preload lists." },
   { priority: "P0", action: "Lazy-load everything below the first viewport — Including background images and editorial modules." },
-  { priority: "P1", action: "Remove sliders or load after idle — Luxury carousels compete with main-thread work." },
+  { priority: "P1", action: "Defer sliders until idle or interaction — Carousels can wait until after first paint." },
   { priority: "P0", action: "Audit every Shopify app embed — Especially Giftship Liquid error, Bold, accessibility, popups, recommendations, chat, reviews." },
   { priority: "P1", action: "Fire marketing tags after consent or interaction where possible — Visual paint first. Tracking second." },
-  { priority: "P1", action: "Remove duplicate GTM / native pixel implementations — LinkedIn appears twice; hunt overlaps across Google/Meta/native Shopify." },
+  { priority: "P1", action: "Remove duplicate GTM / native pixel implementations — LinkedIn appears twice; check overlaps across Google/Meta/native Shopify." },
   { priority: "P1", action: "Load quick-shop / modal code only after click." },
-  { priority: "P1", action: "Reduce hidden desktop/mobile duplicate markup." },
+  { priority: "P1", action: "Reduce hidden desktop/mobile duplicate markup where practical." },
   { priority: "P2", action: "Consolidate fonts and reduce weights — Self-host or trim Nunito weight set." },
-  { priority: "P2", action: "Replace animation libraries with CSS where practical." },
-  { priority: "P1", action: "Kill unused app code left after uninstalls." },
+  { priority: "P2", action: "Prefer CSS motion over heavy animation libraries where practical." },
+  { priority: "P1", action: "Remove unused app code left after uninstalls." },
   { priority: "P0", action: "Test homepage, collection, and product templates separately." },
 ];

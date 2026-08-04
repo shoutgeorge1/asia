@@ -20,7 +20,7 @@ export default function TechAuditPage() {
   return (
     <AppShell
       title="Shopify performance tech audit"
-      subtitle="The brand presentation is strong. Public Lighthouse shows the theme, apps, and tags add real weight on top of a fast Shopify foundation. Growth move: leave the theme for brand browsing, and acquire on a leaner path."
+      subtitle="The store looks expensive — and the photography backs that up. This is not “Shopify is slow.” They started from a fast foundation; the opportunity is how much theme, media, and marketing weight rides along on cold mobile loads. Growth move: keep the brand storefront for browsing, acquire on a leaner path."
       eyebrow="External tech audit · Real Lighthouse · homepage 12/100"
     >
       <p className="mb-6 text-sm text-muted">
@@ -113,7 +113,7 @@ export default function TechAuditPage() {
       <div className="mt-10">
         <CopyBox
           title="Copy / paste for their web-dev team"
-          subtitle="You are not touching the theme. This note tells their team: leave it alone for growth, optional hygiene only."
+          subtitle="Optional hygiene note — growth does not depend on a theme rebuild."
           text={webDevHandoffNote}
         />
       </div>
@@ -121,12 +121,13 @@ export default function TechAuditPage() {
       <section className="mt-12 rounded-xl border border-line bg-panel p-6">
         <h3 className="font-display text-xl font-semibold text-ink">Bottom line</h3>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          Performance headroom is constrained by a rich luxury theme, large media,
-          and a full marketing-script stack — not by Shopify as a commerce
-          platform. That does not require a theme rebuild. Keep the brand
-          storefront for direct and returning visitors. Put acquisition (paid +
-          SEO) on a lean Next.js portal — preferably a new domain without “shop”
-          in the name — and hand shoppers into native Shopify PDPs and checkout.
+          Brand and photography are strengths. Mobile performance headroom comes
+          mainly from a rich luxury theme, large media, and a full marketing-script
+          stack — not from Shopify as a commerce platform. That does not require a
+          theme rebuild. Keep the brand storefront for direct and returning
+          visitors. Put acquisition (paid + SEO) on a lean Next.js portal —
+          preferably a new domain without “shop” in the name — and hand shoppers
+          into native Shopify PDPs and checkout.
         </p>
       </section>
 
@@ -154,8 +155,12 @@ export default function TechAuditPage() {
 
       <section className="mt-12">
         <h3 className="font-display text-xl font-semibold text-ink">
-          Likely damage hierarchy
+          Where mobile weight likely comes from
         </h3>
+        <p className="mt-2 text-sm text-muted">
+          Ranked by probable impact on cold loads — evidence-based, not a critique
+          of the brand look.
+        </p>
         <ol className="mt-4 space-y-3">
           {damageHierarchy.map((item, i) => (
             <li
